@@ -1,0 +1,53 @@
+Function to check how strong a password is:
+    Start with a score of 0
+    Start with an empty list of suggestions
+
+    If the password is shorter than 8 characters:
+        Add a message: "Password is too short"
+    Else:
+        Add 1 point to the score
+
+    If the password has at least one uppercase letter:
+        Add 1 point to the score
+    Else:
+        Suggest: "Add uppercase letters"
+
+    If the password has at least one lowercase letter:
+        Add 1 point to the score
+    Else:
+        Suggest: "Add lowercase letters"
+
+    If the password has at least one number:
+        Add 1 point to the score
+    Else:
+        Suggest: "Add numbers"
+
+    If the password has at least one special character (like !, @, #, etc.):
+        Add 1 point to the score
+    Else:
+        Suggest: "Add special characters"
+
+    Return the total score and the list of suggestions
+End function
+
+---
+
+Main program:
+    Show a welcome message
+
+    Repeat the following steps:
+        Ask the user to enter a password
+
+        Use the function to check the password's strength
+
+        Show the score (out of 5)
+
+        If the score is 5:
+            Say the password is strong
+        If the score is 3 or 4:
+            Say the password is mediocre, and show suggestions
+        If the score is less than 3:
+            Say the password is weak, and show the suggestions
+
+        Then ask for another password
+  
