@@ -4,7 +4,7 @@ def password_strength(password):
     feedback = []
     #Check password length- 8 char minimum
     if len(password) < 8:
-        feedback.append("A strong password should be at least 8 characters.")
+        feedback.append("Whilst brevity may be the heart of wit, it is not the heart of a good password! Try for 8 characters or more :)")
     else:
         strength_score += 1
     #Check for uppercase letters
