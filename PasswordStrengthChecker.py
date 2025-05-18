@@ -34,11 +34,11 @@ def password_strength(password):
 
     # Determine overall strength
     if strength_score == 5:
-        overall = "Strong"
+        overall = "Pretty strong, good effort! Now don't forget it..."
     elif strength_score >= 3:
-        overall = "Moderate"
+        overall = "Not too bad, but you can do better!"
     else:
-        overall = "Weak"
+        overall = "Definitely could be better, try again!"
 
     return {
         "score": strength_score,
@@ -47,16 +47,22 @@ def password_strength(password):
     }
 
 
-test_password = input("Enter a password to check: ")
-result = password_strength(test_password)
-
-print(f"\nPassword Strength: {result['strength']} ({result['score']}/5)")
-
-if result['feedback']:
-    print("\nImprovement suggestions:")
-    for suggestion in result['feedback']:
-        print(f"- {suggestion}")
-else:
-    print("\nYour password meets all strength criteria!")
-
-
+while True:
+    test_password = input("Enter a password to check, or enter 'quit' to exit: ")
+    
+    if test_password.lower() == 'quit':
+        print("Thank you for using the password checker!")
+        break
+        
+    result = password_strength(test_password)
+    
+    print(f"\nPassword Strength: {result['strength']} ({result['score']}/5)")
+    
+    if result['feedback']:
+        print("\nImprovement suggestions:")
+        for suggestion in result['feedback']:
+            print(f"- {suggestion}")
+    else:
+        print("\nYour password meets all strength criteria!")
+    
+    print("\n" + "-"*50 + "\n")  # Add a separator line between attempts
