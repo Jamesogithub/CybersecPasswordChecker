@@ -1,5 +1,6 @@
 def password_strength(password):
     #Password strength score and feedback
+    #test commit line
     strength_score = 0
     feedback = []
     #Check password length- 8 char minimum
