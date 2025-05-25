@@ -59,7 +59,7 @@ def password_strength(password, common_passwords):
     elif strength_score >= 3:
         overall = "Not too bad, but you can do better!"
     else:
-        overall = "Definitely could be better, try again!"
+        overall = "Terrible. Try again!"
 
     return {
         "score": strength_score,
@@ -90,4 +90,4 @@ while True:
     else:
         print("\nYour password meets all strength criteria!")
     
-    print("\n" + "-"*50 + "\n")  # Add a separator line between attempts
+    print("\n" + "-"*50 + "\n")  # Blank line between attempts
