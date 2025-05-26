@@ -2,6 +2,12 @@ Function to check how strong a password is:
     Start with a score of 0
     Start with an empty list of suggestions
 
+    If the password matches list of common passwords
+        Add a message: "Unsafe - This is a commonly used password!"
+	    Return to start, ask for another password
+	Else:
+	    Move on to other strength checks
+
     If the password is shorter than 8 characters:
         Add a message: "Password is too short"
     Else:
@@ -50,4 +56,3 @@ Main program:
             Say the password is weak, and show the suggestions
 
         Then ask for another password
-  
